@@ -1,0 +1,295 @@
+.main-container {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  border-radius: 10px;
+  box-shadow: 0 0 25px 2px;
+  background: whitesmoke;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 1300px;
+}
+
+.top-menu,
+.grid-header {
+  background-color: rgb(50, 50, 50);
+  box-shadow: 0 0 2px 2px rgb(35, 35, 35) inset;
+  color: whitesmoke;
+}
+
+.top-menu {
+  display: flex;
+  justify-content: center;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.top-menu-admin {
+  flex-direction: column;
+}
+
+.admin-mode-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.5rem;
+  box-shadow: 0 2px 0 0 rgb(35, 35, 35);
+}
+
+.admin-header-title,
+.calendar-button span,
+.search-bar label {
+  margin: 0.25rem;
+}
+
+.search-bar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.5rem;
+}
+
+.search-bar div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.top-menu-input {
+  margin: 0.25rem;
+}
+
+.top-menu-admin-button img {
+  width: 30px;
+  height: 30px;
+}
+
+.top-menu-button {
+  display: flex;
+  margin-left: 0.25rem;
+  margin-right: 0.25rem;
+  background-color: rgb(50, 50, 50);
+  border: none;
+}
+
+.top-menu-button img {
+  width: 24px;
+  height: 24px;
+}
+
+.info-message {
+  color: red;
+  margin-left: 0.5rem;
+  font-weight: bold;
+}
+
+.calendar-button {
+  display: flex;
+  border-radius: 5px;
+  padding: 0.25rem;
+}
+
+.text-button {
+  padding: 0.5rem;
+}
+
+.week-button-left {
+  display: flex;
+  padding: 0.5rem 0.5rem 0.5rem 0;
+}
+
+.week-button-right {
+  display: flex;
+  padding: 0.5rem 0 0.5rem 0.5rem;
+}
+
+.week-button-left img,
+.week-button-right img {
+  width: 30px;
+  height: 30px;
+}
+
+.calendar-button:hover {
+  cursor: pointer;
+  box-shadow: 0 0 4px 1px rgb(20, 20, 20) inset;
+}
+
+.calendar {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-bottom: 1rem;
+}
+
+.duration-menu {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0.5rem;
+}
+
+.duration-menu-title {
+  display: flex;
+  justify-content: center;
+  padding: 0.5rem;
+}
+
+.duration-options {
+  padding: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.dialog {
+  z-index: 1;
+  pointer-events: all;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 0 0 10px 2px;
+  margin-top: 5rem;
+  position: fixed;
+  font-size: 14pt;
+  width: 80vw;
+  max-width: 500px;
+}
+
+.dialog-header {
+  margin: 0;
+  padding-bottom: 1rem;
+}
+
+.dialogContent {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.dialogContent-top {
+  margin-bottom: 1rem;
+}
+
+.dialogContent-top label {
+  display: flex;
+  justify-content: space-between;
+}
+
+.dialogContent-middle {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+.dialogContent-middle div {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 0.25rem;
+}
+
+.dialogContent-middle input,
+.dialogContent-middle textarea {
+  width: 50%;
+  font-size: 12pt;
+  resize: none;
+}
+
+.dialogContent-middle textarea {
+  height: 5rem;
+}
+
+.dialogContent-middle label {
+  width: 70%;
+  display: flex;
+  justify-content: flex-end;
+  line-break: anywhere;
+}
+
+.dialogContent-bottom {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1rem;
+}
+
+.dialog-button {
+  justify-content: center;
+  align-items: center;
+  padding: 0.5rem;
+  margin: 0.5rem;
+  border: 1px solid rgb(50, 50, 50);
+  width: 25%;
+}
+
+.calendar-title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.75rem;
+  border-bottom: 1px solid rgb(50, 50, 50);
+}
+
+.week-header {
+  font-size: 20pt;
+}
+
+.calendar-grid {
+  display: grid;
+  grid-template-columns: auto auto auto auto auto auto auto;
+  overflow-x: auto;
+  max-height: min(60vh, 600px);
+  overflow-y: auto;
+}
+
+.grid-header {
+  padding: 0.75rem;
+  text-align: center;
+}
+
+.time-item {
+  padding: 0.25rem 1rem 0.25rem 1rem;
+  text-align: center;
+}
+
+.time-item-unavailable {
+  opacity: 30%;
+}
+
+.time-item-available label:hover {
+  cursor: pointer;
+  box-shadow: 0 2px 0 0 rgb(45, 45, 45);
+}
+
+/* ---- MOBILE LAYOUT ---- */
+
+.dialogContent-middle-mobile input,
+.dialogContent-middle-mobile textarea {
+  font-size: 10pt;
+  width: 65%;
+}
+
+.week-header-mobile {
+  font-size: 14pt;
+}
+
+.week-button-right-mobile span,
+.week-button-left-mobile span {
+  display: none;
+}
+
+.week-button-right-mobile,
+.week-button-left-mobile {
+  padding: 0.5rem;
+}
+
+.search-bar-mobile {
+  flex-direction: column;
+}
+
+.dialogContent-mobile {
+  font-size: 12pt;
+}
+
+.dialog-button-mobile {
+  width: calc(100% / 2.5);
+}
