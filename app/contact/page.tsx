@@ -1,10 +1,8 @@
-// "use client";
 import Image from "next/image";
 import styles from "./contact.module.css";
-// import dynamic from "next/dynamic";
-// import HydrationTest from "@/components/hydrationTest";
-
-// const HydrationTestNoSSR = dynamic(()=>import("@/components/hydrationTest"), {ssr: false})
+import { Suspense } from "react";
+import ContactForm from "../Components/contact/ContactForm";
+import LoadingSkelton from "../Components/contact/LoadingSkelton";
 
 export const metadata = {
   title: "Contact Page",
@@ -12,9 +10,6 @@ export const metadata = {
 };
 
 const ContactPage = () => {
-  // const a = Math.random();
-
-  // console.log(a);
 
   return (
     <div className={styles.container}>
@@ -24,19 +19,9 @@ const ContactPage = () => {
       <div className={styles.formContainer}>
         {/* <HydrationTestNoSSR/> */}
         {/* <div suppressHydrationWarning>{a}</div> */}
-        <form action="" className={styles.form}>
-          <input type="text" placeholder="Name and Surname" />
-          <input type="text" placeholder="Email Address" />
-          <input type="text" placeholder="Phone Number (Optional)" />
-          <textarea
-            name=""
-            id=""
-            cols={30}
-            rows={10}
-            placeholder="Message"
-          ></textarea>
-          <button>Send</button>
-        </form>
+        <Suspense fallback={<LoadingSkelton/>}>
+        <ContactForm/>
+        </Suspense>
       </div>
     </div>
   );

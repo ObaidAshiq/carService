@@ -19,7 +19,7 @@ const AboutPage = () => {
         <p className={styles.desc}>
           We believe in the flexibility and precision of good ideas. As your
           premier car care destination, we offer world-class services including
-          car washing, oil changes, and interior cleaning. Trust our Special
+          car washing, oil changes, interior cleaning and other professional services. Trust our Special
           Team for all your automotive needs
         </p>
         <div className={styles.boxes}>

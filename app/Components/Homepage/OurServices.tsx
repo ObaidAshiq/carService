@@ -1,6 +1,8 @@
 import Image from "next/image";
 import React from "react";
-import Car1 from "@/public/car1.jpeg";
+import carPickAndDrop from "@/public/Homepage/carPickAndDrop.jpg";
+import carWash from "@/public/Homepage/carWash.jpg";
+import oilChange from "@/public/Homepage/oilChange.jpg";
 import Link from "next/link";
 import {
   Drawer,
@@ -64,7 +66,7 @@ const OurServices = ({ userDetails }: { userDetails: userDetailsType }) => {
                 <div className="card text-left light:border overflow-clip border-black  rounded-[10px_50px_10px_10px] hover:shadow-[13px_15px_0px_0px_#7B61FF,0px_1px_2px_0px_#7F56D9] transition-shadow  flex flex-col h-full">
                   <div className="w-full">
                     <Image
-                      src={Car1}
+                      src={carPickAndDrop}
                       alt="Cab Service"
                       width={400}
                       className="object-cover"
@@ -92,8 +94,8 @@ const OurServices = ({ userDetails }: { userDetails: userDetailsType }) => {
                 <div className="card text-left light:border overflow-clip border-black  rounded-[10px_50px_10px_10px] hover:shadow-[13px_15px_0px_0px_#7B61FF,0px_1px_2px_0px_#7F56D9] transition-shadow  flex flex-col h-full">
                   <div className="w-full">
                     <Image
-                      src={Car1}
-                      alt="Cab Service"
+                      src={carWash}
+                      alt="Car wash"
                       width={400}
                       className="object-cover"
                     />
@@ -120,8 +122,8 @@ const OurServices = ({ userDetails }: { userDetails: userDetailsType }) => {
                 <div className="card text-left light:border overflow-clip border-black  rounded-[10px_50px_10px_10px] hover:shadow-[13px_15px_0px_0px_#7B61FF,0px_1px_2px_0px_#7F56D9] transition-shadow  flex flex-col h-full">
                   <div className="w-full">
                     <Image
-                      src={Car1}
-                      alt="Cab Service"
+                      src={oilChange}
+                      alt="Oil change"
                       width={400}
                       className="object-cover"
                     />

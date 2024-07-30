@@ -57,7 +57,7 @@ const Links = ({session}:any) => {
   <DropdownMenuTrigger>
     <Avatar>
   <AvatarImage src={session.user.image} />
-  <AvatarFallback>{session.user.name.split(/\s/).reduce((response:any,word:any)=> response+=word.slice(0,1),'')}</AvatarFallback>
+  <AvatarFallback>{session.user.name?.split(/\s/).reduce((response:any,word:any)=> response+=word.slice(0,1),'')}</AvatarFallback>
 </Avatar>
 </DropdownMenuTrigger>
   <DropdownMenuContent>

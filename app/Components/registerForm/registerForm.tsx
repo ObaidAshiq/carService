@@ -27,7 +27,7 @@ const RegisterForm = () => {
         name="passwordRepeat"
       />
       <button>Register</button>
-      {state?.error}
+      <p className="text-red-500">{state?.error}</p>
       <Link href="/login">
         Have an account? <b>Login</b>
       </Link>

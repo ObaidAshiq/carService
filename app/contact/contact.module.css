@@ -2,6 +2,7 @@
     display: flex;
     align-items: center;
     gap: 100px;
+    padding-inline: 8px;
   }
   
   .imgContainer {
@@ -15,7 +16,8 @@
   }
   
   .formContainer {
-    flex: 1;
+    flex: 1; 
+    padding-right: 10px;
   }
   
   .form {
